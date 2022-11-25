@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../styles/PizzaList.module.scss";
 import PizzaCard from "./PizzaCard"
 
-const PizzaList = ({pizzaList }) => {
+const PizzaList = ({ pizzaList }) => {
 
  
   return (
