@@ -82,6 +82,7 @@ const Cart = () => {
           }}
           onApprove={function (data, actions) {
             return actions.order.capture().then(function (details) {
+              console.log(details)
               const shipping = details.purchase_units[0].shipping;
               createOrder({
                 customer: shipping.name.full_name,
@@ -173,7 +174,7 @@ const Cart = () => {
               </button>
           <PayPalScriptProvider 
           options={{ 
-            "client-id": "test",
+            "client-id": "AVqxrJSrXwhnhVuyjItFE4Cpbx3aShR5N1yVC-UNb_hdQQEp64FbGu4OI_Hx6y-l79gsJBx4RNqrKP_k",
             components: "buttons",
             currency: "USD",
            "disable-funding": "credit,card,p24",
@@ -183,7 +184,7 @@ const Cart = () => {
           
           
           >
-            <PayPalButtons
+            <ButtonWrapper
             currency={currency} showSpinner={false} 
         
              
